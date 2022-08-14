@@ -1,0 +1,2 @@
+fastapi[all]==0.79.0
+python-logging-loki==0.3.1

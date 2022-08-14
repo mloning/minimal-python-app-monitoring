@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minimal-app
+spec:
+  selector:
+    matchLabels:
+      app: minimal-app
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: minimal-app
+    spec:
+      containers:
+        - name: minimal-app
+          image: minimal-app:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
